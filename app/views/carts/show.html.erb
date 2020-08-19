@@ -1,5 +1,7 @@
 <section class="cart-show">
 
+  <% if enhanced_cart.present? %>
+
   <header class="page-header">
     <h1>My Cart</h1>
   </header>
@@ -48,6 +50,12 @@
       <% end %>
     </div>
   </div>
+
+  <% else %>
+    <div class="alert alert-info" role="alert">
+      There are no items in your cart! <a href="/" class="alert-link">Go back to Products Page</a>. Happy shopping!
+    </div>
+  <% end %>
 
 </section>
 
